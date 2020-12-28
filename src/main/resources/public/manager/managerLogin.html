@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page - Employee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<h2 align="center"> Manager's Login Page</h2>
+
+<div align="center" id="employee-login-form">
+    <form method="post" action="/api/managers/login">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Submit" onclick=saveUser()>
+    </form>
+</div>
+
+<script>
+    function saveUser() {
+        let input = document.getElementById("email").value;
+        localStorage.setItem("email", input);
+    }
+</script>
+
+</body>
+</html>

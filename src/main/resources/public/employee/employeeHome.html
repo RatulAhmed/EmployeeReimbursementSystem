@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Home Page </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="employee/employeeHome.js"></script>
+
+</head>
+<body>
+    <h1 align="center">Welcome to your home page</h1>
+
+    <div id="employee-nav">
+        <br>
+        <a href="/api/employees/logout" onclick="clearLocalStorage()">Logout</a>
+        <br>
+        <a href="/updateEmployee">Update Account Info</a>
+        <br>
+        <a href="/newReimbursement">Create a Reimbursement Request</a>
+        <br>
+        <a href="/pendingReimbursements">View Pending Requests</a>
+        <br>
+        <a href="/resolvedReimbursements">View Resolved Requests</a>
+    </div>
+
+    <script src="employee/employeeHome.js"></script>
+    <script>
+        function clearLocalStorage() {
+            localStorage.clear();
+        }
+    </script>
+
+</body>
+</html>

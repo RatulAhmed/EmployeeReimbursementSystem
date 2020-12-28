@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Home Page </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="manager/managerHome.js"></script>
+
+</head>
+<body>
+<h1>Welcome to the Manager Dashboard</h1>
+
+<div id="employee-nav">
+    <br>
+    <a href="/" onclick="clearLocalStorage()">Logout</a>
+    <br>
+<!--    <a href="/">Handle Pending Employee Reimbursements</a>-->
+<!--    <br>-->
+    <a href="/pendingReimbursementsManager">View All Pending Requests</a>
+    <br>
+    <a href="/resolvedReimbursementsManager">View All Resolved Requests</a>
+    <br>
+    <a href="/allEmployees">View All Current Employees</a>
+    <br>
+</div>
+<script>
+    function clearLocalStorage() {
+        localStorage.clear();
+    }
+</script>
+
+</body>
+</html>

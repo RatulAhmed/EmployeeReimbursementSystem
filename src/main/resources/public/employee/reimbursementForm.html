@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1 align="center">Reimbursement Form Request</h1>
+
+    <div align="center" id="reimbursement-form-container">
+        <form method="post" id="reimbursementForm" action="/api/employees/2/reimbursements">
+            <label for="amount">Reimbursement Amount</label>
+            <br>
+            <input type="text" id="amount" name="amount" required>
+            <br>
+            <label for="description">Description of your request</label>
+            <br>
+            <textarea name="description" rows="5" cols="80" id="description"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

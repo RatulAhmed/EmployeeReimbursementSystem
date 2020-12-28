@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Update Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="employee/employeeUpdateForm.js"></script>
+
+</head>
+<body onload="getEmail()">
+
+    <h1 align="center">Update Your Information</h1>
+
+    <div align="center" id="employee-update-form-container">
+        <form method="post" id="employeeUpdate" action="/api/employees/1">
+            <label for="email">Your Email</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="password">Change your password</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <input type="submit" value="Submit" onclick="saveUserEmail()">
+        </form>
+
+        <script>
+            function saveUserEmail() {
+                let input = document.getElementById("email").value;
+                localStorage.setItem("email", input);
+            }
+        </script>
+    </div>
+
+</body>
+</html>
